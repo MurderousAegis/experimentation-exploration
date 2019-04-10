@@ -1,0 +1,29 @@
+import java.util.Scanner;
+class Freq{
+void freq(String str){
+int p=str.length();
+int i=0, freq=0;
+char ch, ch2='\0';
+for (ch='A'; ch<='z'; ch++)
+{
+while (i<p)
+{
+ch2=str.charAt(i);
+if (ch2==ch)
+freq++;
+i++;
+}
+if (freq>0)
+System.out.println(ch+" - "+freq);
+i=0;
+freq=0;
+}
+}
+public static void main(){
+Scanner sc=new Scanner(System.in);
+Prog6 p6=new Prog6();
+System.out.print("Enter a word:\t");
+String str=sc.next();
+p6.freq(str);
+}
+}
